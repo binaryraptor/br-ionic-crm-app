@@ -1,0 +1,14 @@
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    .login-text{
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .login-icon {
+        font-size: 44px;
+    }
+
+}

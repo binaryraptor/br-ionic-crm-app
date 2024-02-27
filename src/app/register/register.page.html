@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">frist name</ion-label>
+    <ion-input #fristNameInput="ngModel"
+    ngModel
+    type="text"
+    name="fristName"
+    required></ion-input>
+   </ion-item>
+   <ion-item>
+    <ion-label position="floating">last name</ion-label>
+    <ion-input #lastNameInput="ngModel"
+    ngModel
+    type="text"
+    name="lastName"
+    required></ion-input>
+   </ion-item>
+   <ion-item>
+    <ion-label position="floating">username:</ion-label>
+    <ion-input #usernameInput="ngModel"
+    ngModel
+    type="text"
+    name="username"
+    required></ion-input>
+   </ion-item><ion-item>
+    <ion-label position="floating">Email:</ion-label>
+    <ion-input #emailInput="ngModel"
+    ngModel
+    type="email"
+    name="email"
+    required></ion-input>
+   </ion-item>
+   <ion-item>
+    <ion-label position="floating">password:</ion-label>
+    <ion-input #passwordInput="ngModel"
+    ngModel
+    type="password"
+    name="password"
+    required></ion-input>
+   </ion-item>
+   <ion-button type="submit">submit</ion-button> <ion-button type="Button" (click)="onReset()">cancel</ion-button>
+   <ion-button type="Button" >Go Back</ion-button>
+</ion-content>
+

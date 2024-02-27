@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content >
+  <div class="title-container">
+    <ion-text color="primary" class="login-text">login</ion-text>
+    <ion-icon class="login-icon" name="logo-login" color="block"></ion-icon> 
+  </div>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <ion-card>
+      <ng-container  *ngIf="submissionType !== 'join'"  >
+     
+       <ion-item>
+        <ion-label position="floating">username:</ion-label>
+        <ion-input #usernameInput="ngModel"
+        ngModel
+        type="text"
+        name="username"
+        required></ion-input>
+       </ion-item>
+
+      </ng-container>
+      
+      <ion-item>
+        <ion-label position="floating">password:</ion-label>
+        <ion-input #passwordInput="ngModel"
+        ngModel
+        type="password"
+        name="password"
+        required></ion-input>
+       </ion-item>
+      
+      <ion-button [disabled]="!form.valid" type="login" shape="round" expand="block" (click)="login()" >
+          <a routerLink="/dashboard">dashboard</a>
+        {{submissionType === 'login' ? 'login' : 'Accept & login' }}
+        
+
+      </ion-button>
+    </ion-card>
+  </form>
+  <ion-item>
+    <div class="additional-links">
+      <a routerLink="/register">Register New User</a>
+          <span class="separator"> | </span>
+      <a routerLink="/forget-password">Forget Password</a>
+    </div>
+  </ion-item>
+  <ion-item>
+    
+  </ion-item>
+</ion-content>
